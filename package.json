@@ -1,0 +1,19 @@
+{
+  "name": "bukube",
+  "version": "1.0.0",
+  "main": "src/Main.js",
+  "repository": "https://github.com/wisn/bukube.git",
+  "author": "Wisnu Adi Nurcahyo",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "gulp",
+    "local": "http-server"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-haml": "^1.0.1",
+    "gulp-stylus": "^2.7.0",
+    "http-server": "^0.11.1"
+  }
+}

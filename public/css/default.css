@@ -1,0 +1,89 @@
+body {
+  cursor: default;
+}
+body header nav.navbar {
+  background-color: #fff;
+  border-bottom: 2px solid #3f51b5;
+}
+body main {
+  min-height: 100vh;
+  padding-top: 2em;
+}
+body footer {
+  border-top: 2px solid #ababab;
+  margin: 4em 0 1em;
+  padding: 1em 0 0;
+}
+body.login-page form,
+body.register-page form {
+  margin: 8em auto 2em;
+  width: 32em;
+}
+@media screen and (max-width: 540px) {
+  body.login-page form,
+  body.register-page form {
+    width: 100%;
+  }
+}
+body.login-page form .unique-underline,
+body.register-page form .unique-underline {
+  border: 2px solid #3f51b5;
+  border-top: none;
+  display: block;
+  height: 1em;
+  margin: -0.5em auto 0;
+  width: 100%;
+}
+body.login-page form h1,
+body.register-page form h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+body.login-page form input:not([type=submit]),
+body.register-page form input:not([type=submit]) {
+  border: none;
+  border-bottom: 2px solid #ababab;
+  display: block;
+  font-size: 16pt;
+  margin: 2em 0;
+  padding: 0.5em 0.25em;
+  width: 100%;
+}
+body.login-page form input:not([type=submit]):focus,
+body.register-page form input:not([type=submit]):focus {
+  border-bottom: 2px solid #3f51b5;
+}
+body.login-page form input:not([type=submit]):disabled,
+body.register-page form input:not([type=submit]):disabled {
+  background-color: #fff;
+  border-bottom: 2px solid #ababab;
+  color: #ababab;
+}
+body.login-page form input[type=submit],
+body.register-page form input[type=submit] {
+  cursor: pointer;
+  color: #ababab;
+  background: transparent;
+  border: 2px solid #ababab;
+  display: block;
+  font-size: 16pt;
+  margin: 3em auto 0;
+  padding: 0.5em 0.25em;
+  width: 75%;
+}
+body.login-page form input[type=submit]:hover,
+body.register-page form input[type=submit]:hover {
+  color: #3f51b5;
+  border: 2px solid #3f51b5;
+}
+body.login-page form input[type=submit]:disabled,
+body.register-page form input[type=submit]:disabled {
+  color: #ababab;
+  cursor: default;
+  border: 2px solid #ababab;
+}
+body.login-page .alert {
+  display: none;
+  text-align: center;
+}

@@ -1,0 +1,79 @@
+indigo = #3F51B5
+grey = #ABABAB
+
+body
+  cursor default
+
+  header nav.navbar
+    background-color #FFF
+    border-bottom 2px solid indigo
+
+  main
+    min-height 100vh
+    padding-top 2em
+
+  footer
+    border-top 2px solid grey
+    margin 4em 0 1em
+    padding 1em 0 0
+
+body.login-page form, body.register-page form
+  margin 8em auto 2em
+  width 32em
+
+  @media screen and (max-width 540px)
+    width 100%
+
+  .unique-underline
+    border 2px solid indigo
+    border-top none
+    display block
+    height 1em
+    margin -.5em auto 0
+    width 100%
+
+  h1
+    margin 0
+    padding 0
+    text-align center
+
+  input:not([type=submit])
+    border none
+    border-bottom 2px solid grey
+    display block
+    font-size 16pt
+    margin 2em 0
+    padding .5em .25em
+    width 100%
+
+  input:not([type=submit]):focus
+    border-bottom 2px solid indigo
+
+  input:not([type=submit]):disabled
+    background-color #FFF
+    border-bottom 2px solid grey
+    color grey
+
+  input[type=submit]
+    cursor pointer
+    color grey
+    background transparent
+    border 2px solid grey
+    display block
+    font-size 16pt
+    margin 3em auto 0
+    padding .5em .25em
+    width 75%
+
+  input[type=submit]:hover
+    color indigo
+    border 2px solid indigo
+
+  input[type=submit]:disabled
+    color grey
+    cursor default
+    border 2px solid grey
+
+body.login-page .alert
+  display none
+  text-align center
