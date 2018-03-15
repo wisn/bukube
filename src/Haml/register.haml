@@ -34,7 +34,7 @@
       .container
         %form{name: 'register'}
           %h1
-            Bukube
+            %a{href: '/'} Bukube
           %span.unique-underline{style: 'width: 75%'}
           %input{type: 'text', name: 'email', placeholder: 'Alamat Email'}
           %input{type: 'text', name: 'username', placeholder: 'Nama Pengguna'}
@@ -44,7 +44,8 @@
         .alert.alert-light
     %footer
       .container
-        Hak cipta &copy; 2018, Bukube.
+        Hak cipta &copy; 2018,
+        %a{href: '/'} Bukube.
     %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'}
     %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'}
     %script{src: '/js/application.js'}
