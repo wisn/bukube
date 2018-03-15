@@ -10,11 +10,11 @@
     %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'}
   %body.home-page
     %header
-      %nav.navbar.navbar-light.navbar-expand-lg.sticky-top
+      %nav.navbar.navbar-light.navbar-expand-lg.fixed-top
         .container
           %a.navbar-brand{href: '/'} Bukube
           %button.navbar-toggler{type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarNav', 'aria-controls': 'navbarNav', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation'}
-            %span.navbar-toggle-icon
+            %span.fa.fa-bars
           .collapse.navbar-collapse#navbarNav
             %ul.navbar-nav.mr-auto
               %li.nav-item.active
@@ -27,14 +27,74 @@
                 %a.nav-link{href: '/'} Jual Buku
             %ul.navbar-nav.ml-auto
               %li.nav-item
+                %a.nav-link{href: '/carts.html'}
+                  %i.fa.fa-shopping-cart
+              %li.nav-item
                 %a.nav-link{href: '/register.html'} Registrasi
               %li.nav-item
                 %a.nav-link{href: '/login.html'} Masuk
     %main
+      .poster.big-poster
+        .container
+          .row
+            .col-md-6
+              %img{src: '/img/books-lineart.png'}
+            .col-md-6
+              %div{align: 'right'}
+                %h1 Beli Buku
+                %p
+                  Beli buku bekas berkualitas tinggi
+                %p.sub
+                  dengan harga murah
+                %a.special-button{href: '/buy-books.html'}
+                  Cari Buku
+                .divider
+                %a.label{href: '/buy-books.html'} Matematika
+                %a.label{href: '/buy-books.html'} Fisika
+                %a.label{href: '/buy-books.html'} Kimia
+                %a.label{href: '/buy-books.html'} Biologi
+                %a.label{href: '/buy-books.html'} Ilmu Komputer
+                %a.label{href: '/buy-books.html'} Ekonomi
+                %a.label{href: '/buy-books.html'} Sosiologi
+          .divider
+          .divider
+          .divider
+          .divider
+          .row
+            .col-md-6
+              %h1 Jual Buku
+              %p
+                Jual buku bekas yang sudah
+              %p.sub
+                tak terpakai lagi
+              %a.special-button{href: '/sell-books.html'}
+                Pilih Buku
+            .col-md-6
+              %img{src: '/img/book-lineart.png'}
+          .divider
+          .divider
+          .divider
+          .divider
+          %h2{align: 'center'} Hobi Menulis?
+          %div{align: 'center'}
+            %a.special-button{href: '/write-books.html'}
+              Tulis Buku
+          .divider
+          .divider
+      .carts
+        %h3 Keranjang Belanja
+        %span Tidak ada buku di keranjang belanja.
     %footer
       .container
-        Hak cipta &copy; 2018,
-        %a{href: '/'} Bukube.
+        .row
+          .col-md-4
+            Hak cipta &copy; 2018,
+            %a{href: '/'} Bukube.
+          .col-md-8{align: 'right'}
+            .list
+              %a{href: '/'} Tentang Kami
+              %a{href: '/'} Kebijakan Privasi
+              %a{href: '/'} Aturan Penggunaan
     %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'}
     %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'}
     %script{src: '/js/application.js'}

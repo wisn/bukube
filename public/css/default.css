@@ -1,13 +1,40 @@
 body {
   cursor: default;
 }
+body .divider {
+  padding: 1em;
+}
 body header nav.navbar {
   background-color: #fff;
   border-bottom: 2px solid #3f51b5;
 }
+body header nav.navbar .fa-shopping-cart {
+  border: 1px solid #ababab;
+  border-radius: 100%;
+  margin-top: -0.5em;
+  padding: 0.5em;
+}
 body main {
   min-height: 100vh;
   padding-top: 2em;
+}
+body main .carts {
+  border: 2px solid #3f51b5;
+  display: none;
+  padding: 1em 0 2em;
+  position: fixed;
+  right: 7em;
+  top: 3.5em;
+  width: 280px;
+}
+body main .carts h3 {
+  font-size: 14pt;
+  text-align: center;
+}
+body main .carts span {
+  display: block;
+  font-size: 10pt;
+  text-align: center;
 }
 body footer {
   border-top: 2px solid #ababab;
@@ -20,6 +47,54 @@ body footer a {
 }
 body footer a:hover {
   color: #222;
+}
+body footer .list a {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+body.home-page {
+  padding: 4em 0 0;
+}
+body.home-page .big-poster img {
+  width: 100%;
+}
+body.home-page .big-poster h1 {
+  color: #444;
+  font-size: 48pt;
+  margin-top: 1em;
+}
+body.home-page .big-poster p {
+  font-size: 24pt;
+}
+body.home-page .big-poster p.sub {
+  font-size: 18pt;
+  margin-top: -1em;
+}
+body.home-page .big-poster a.special-button {
+  color: #ababab;
+  border: 2px solid #ababab;
+  display: inline-block;
+  font-size: 16pt;
+  margin: 1em 0 0;
+  padding: 0.5em 3em;
+  text-decoration: none;
+}
+body.home-page .big-poster a.special-button:hover {
+  border: 2px solid #3f51b5;
+  color: #3f51b5;
+}
+body.home-page .big-poster a.label {
+  color: #ababab;
+  border-bottom: 2px solid #ababab;
+  display: inline-block;
+  font-size: 12pt;
+  margin: 1em 0.5em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+body.home-page .big-poster a.label:hover {
+  color: #3f51b5;
+  border-bottom: 2px solid #3f51b5;
 }
 body.login-page form,
 body.register-page form {

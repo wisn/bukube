@@ -14,7 +14,7 @@
 <div class="container">
 <a href="/" class="navbar-brand">Bukube</a>
 <button type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
-<span class="navbar-toggle-icon"></span></button>
+<span class="fa fa-bars"></span></button>
 <div id="navbarNav" class="collapse navbar-collapse">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item">
@@ -24,6 +24,9 @@
 <li class="nav-item">
 <a href="/" class="nav-link">Jual Buku</a></li></ul>
 <ul class="navbar-nav ml-auto">
+<li class="nav-item">
+<a href="/carts.html" class="nav-link">
+<i class="fa fa-shopping-cart"></i></a></li>
 <li class="nav-item">
 <a href="/register.html" class="nav-link">Registrasi</a></li>
 <li class="nav-item active">
@@ -38,10 +41,20 @@
 <input type="text" name="identifier" placeholder="Alamat Email/Nama Pengguna"/>
 <input type="password" name="password" placeholder="Kata Sandi"/>
 <input type="submit" value="Masuk"/></form>
-<div class="alert alert-light"></div></div></main>
+<div class="alert alert-light"></div></div>
+<div class="carts">
+<h3>Keranjang Belanja</h3>
+<span>Tidak ada buku di keranjang belanja.</span></div></main>
 <footer>
-<div class="container">Hak cipta &copy; 2018,
-<a href="/">Bukube.</a></div></footer>
+<div class="container">
+<div class="row">
+<div class="col-md-4">Hak cipta &copy; 2018,
+<a href="/">Bukube.</a></div>
+<div align="right" class="col-md-8">
+<div class="list">
+<a href="/">Tentang Kami</a>
+<a href="/">Kebijakan Privasi</a>
+<a href="/">Aturan Penggunaan</a></div></div></div></div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="/js/application.js"></script></body></html>

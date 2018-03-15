@@ -4,25 +4,84 @@ grey = #ABABAB
 body
   cursor default
 
+  .divider
+    padding 1em
   header nav.navbar
     background-color #FFF
     border-bottom 2px solid indigo
-
+    .fa-shopping-cart
+      border 1px solid grey
+      border-radius 100%
+      margin-top -.5em
+      padding .5em
   main
     min-height 100vh
     padding-top 2em
-
+    .carts
+      border 2px solid indigo
+      display none
+      padding 1em 0 2em
+      position fixed
+      right 7em
+      top 3.5em
+      width 280px
+      h3
+        font-size 14pt
+        text-align center
+      span
+        display block
+        font-size 10pt
+        text-align center
   footer
     border-top 2px solid grey
     margin 4em 0 1em
     padding 1em 0 0
-
     a
       color #222
       text-decoration none
-
-    a:hover
+      &:hover
         color #222
+    .list a
+      display inline-block
+      margin 0 .5em
+
+body.home-page
+  padding 4em 0 0
+
+  .big-poster
+    img
+      width 100%
+    h1
+      color #444
+      font-size 48pt
+      margin-top 1em
+    p
+      font-size 24pt
+    p.sub
+      font-size 18pt
+      margin-top -1em
+    a.special-button
+      color grey
+      border 2px solid grey
+      display inline-block
+      font-size 16pt
+      margin 1em 0 0
+      padding .5em 3em
+      text-decoration none
+      &:hover
+        border 2px solid indigo
+        color indigo
+    a.label
+      color grey
+      border-bottom 2px solid grey
+      display inline-block
+      font-size 12pt
+      margin 1em .5em
+      padding .5em 1em
+      text-decoration none
+      &:hover
+        color indigo
+        border-bottom 2px solid indigo
 
 body.login-page form, body.register-page form
   margin 8em auto 2em
@@ -30,7 +89,6 @@ body.login-page form, body.register-page form
 
   @media screen and (max-width 540px)
     width 100%
-
   .unique-underline
     border 2px solid indigo
     border-top none
@@ -38,16 +96,13 @@ body.login-page form, body.register-page form
     height 1em
     margin -.5em auto 0
     width 100%
-
   h1
     margin 0
     padding 0
     text-align center
-
     a
       color #222
       text-decoration none
-
   input:not([type=submit])
     border none
     border-bottom 2px solid grey
@@ -56,15 +111,12 @@ body.login-page form, body.register-page form
     margin 2em 0
     padding .5em .25em
     width 100%
-
-  input:not([type=submit]):focus
-    border-bottom 2px solid indigo
-
-  input:not([type=submit]):disabled
-    background-color #FFF
-    border-bottom 2px solid grey
-    color grey
-
+    &:focus
+      border-bottom 2px solid indigo
+    &:disabled
+      background-color #FFF
+      border-bottom 2px solid grey
+      color grey
   input[type=submit]
     cursor pointer
     color grey
@@ -75,16 +127,13 @@ body.login-page form, body.register-page form
     margin 3em auto 0
     padding .5em .25em
     width 75%
-
-  input[type=submit]:hover
-    color indigo
-    border 2px solid indigo
-
-  input[type=submit]:disabled
-    color grey
-    cursor default
-    border 2px solid grey
-
+    &:hover
+      color indigo
+      border 2px solid indigo
+    &:disabled
+      color grey
+      cursor default
+      border 2px solid grey
 body.login-page .alert, body.register-page .alert
   display none
   text-align center

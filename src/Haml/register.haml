@@ -14,7 +14,7 @@
         .container
           %a.navbar-brand{href: '/'} Bukube
           %button.navbar-toggler{type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarNav', 'aria-controls': 'navbarNav', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation'}
-            %span.navbar-toggle-icon
+            %span.fa.fa-bars
           .collapse.navbar-collapse#navbarNav
             %ul.navbar-nav.mr-auto
               %li.nav-item
@@ -24,6 +24,9 @@
               %li.nav-item
                 %a.nav-link{href: '/'} Jual Buku
             %ul.navbar-nav.ml-auto
+              %li.nav-item
+                %a.nav-link{href: '/carts.html'}
+                  %i.fa.fa-shopping-cart
               %li.nav-item
                 %a.nav-link.active{href: '/register.html'}
                   Registrasi
@@ -42,10 +45,20 @@
           %input{type: 'password', name: 'password', placeholder: 'Kata Sandi'}
           %input{type: 'submit', value: 'Mendaftar'}
         .alert.alert-light
+      .carts
+        %h3 Keranjang Belanja
+        %span Tidak ada buku di keranjang belanja.
     %footer
       .container
-        Hak cipta &copy; 2018,
-        %a{href: '/'} Bukube.
+        .row
+          .col-md-4
+            Hak cipta &copy; 2018,
+            %a{href: '/'} Bukube.
+          .col-md-8{align: 'right'}
+            .list
+              %a{href: '/'} Tentang Kami
+              %a{href: '/'} Kebijakan Privasi
+              %a{href: '/'} Aturan Penggunaan
     %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'}
     %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'}
     %script{src: '/js/application.js'}

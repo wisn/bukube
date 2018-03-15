@@ -41,6 +41,19 @@ const getJSON = url => {
   return json;
 };
 
+const defaultActions = () => {
+  const carts = document.querySelector('.carts');
+  const toggle = document.querySelector('.fa-shopping-cart');
+
+  toggle.addEventListener('click', e => {
+    e.preventDefault()
+
+    carts.style.display = carts.style.display === 'block' ? 'none' : 'block';
+
+    return false;
+  });
+};
+
 const loginActions = () => {
   if (!!pages.login) {
     const show = (elm, msg, form) => {
@@ -169,6 +182,7 @@ const registerActions = () => {
 };
 
 const actions = {
+  defaultActions,
   loginActions,
   registerActions,
 };
