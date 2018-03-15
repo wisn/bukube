@@ -83,7 +83,8 @@ body.register-page form input[type=submit]:disabled {
   cursor: default;
   border: 2px solid #ababab;
 }
-body.login-page .alert {
+body.login-page .alert,
+body.register-page .alert {
   display: none;
   text-align: center;
 }
