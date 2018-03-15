@@ -43,7 +43,7 @@ const getJSON = url => {
 
 const defaultActions = () => {
   const carts = document.querySelector('.carts');
-  const toggle = document.querySelector('.fa-shopping-cart');
+  const toggle = document.querySelector('.fa-shopping-cart').parentNode;
 
   toggle.addEventListener('click', e => {
     e.preventDefault()

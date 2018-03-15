@@ -18,24 +18,47 @@ body
     min-height 100vh
     padding-top 2em
     .carts
+      background-color #FFF
       border 2px solid indigo
       display none
       padding 1em 0 2em
       position fixed
-      right 7em
+      right 6em
       top 3.5em
       width 280px
       h3
         font-size 14pt
         text-align center
+        @media only screen and (max-width 379px)
+          font-size 12pt
       span
         display block
         font-size 10pt
         text-align center
+        @media only screen and (max-width 379px)
+          font-size 8pt
+      @media only screen and (max-width 991px)
+        right -2px
+        top 6em
+        z-index 9999
+      @media only screen and (max-width 379px)
+        width 200px
   footer
     border-top 2px solid grey
     margin 4em 0 1em
     padding 1em 0 0
+    .col-md-8
+      text-align right
+      @media only screen and (max-width 767px)
+        text-align center
+    @media only screen and (max-width 767px)
+      text-align center
+    @media only screen and (max-width 450px)
+      font-size 10pt
+    @media only screen and (max-width 387px)
+      font-size 8pt
+    @media only screen and (max-width 321px)
+      font-size 7pt
     a
       color #222
       text-decoration none
@@ -51,15 +74,39 @@ body.home-page
   .big-poster
     img
       width 100%
+      @media only screen and (max-width 767px)
+        display block
+        margin 0 auto
+        width 75%
     h1
       color #444
       font-size 48pt
       margin-top 1em
+      @media only screen and (max-width 991px)
+        font-size 32pt
+        margin-top .5em
+      @media only screen and (max-width 767px)
+        margin-top 1em
+        text-align center
+      @media only screen and (max-width 370px)
+        font-size 24pt
     p
       font-size 24pt
+      @media only screen and (max-width 991px)
+        font-size 16pt
+      @media only screen and (max-width 767px)
+        text-align center
+      @media only screen and (max-width 370px)
+        font-size 12pt
     p.sub
       font-size 18pt
       margin-top -1em
+      @media only screen and (max-width 991px)
+        font-size 14pt
+      @media only screen and (max-width 767px)
+        text-align center
+      @media only screen and (max-width 370px)
+        font-size 10pt
     a.special-button
       color grey
       border 2px solid grey
@@ -68,9 +115,25 @@ body.home-page
       margin 1em 0 0
       padding .5em 3em
       text-decoration none
+      @media only screen and (max-width 991px)
+        font-size 14pt
+      @media only screen and (max-width 767px)
+        display block
+        margin 0 auto
+        text-align center
+        width 50%
+      @media only screen and (max-width 426px)
+        font-size 12pt
+      @media only screen and (max-width 370px)
+        font-size 10pt
+      @media only screen and (max-width 324px)
+        font-size 8pt
       &:hover
         border 2px solid indigo
         color indigo
+    .labels
+      @media only screen and (max-width 767px)
+        text-align center
     a.label
       color grey
       border-bottom 2px solid grey
@@ -79,9 +142,16 @@ body.home-page
       margin 1em .5em
       padding .5em 1em
       text-decoration none
+      @media only screen and (max-width 991px)
+        margin .5em .25em
+      @media only screen and (max-width 370px)
+        font-size 10pt
       &:hover
         color indigo
         border-bottom 2px solid indigo
+    img.left
+      @media only screen and (max-width 767px)
+        margin 2em auto 0
 
 body.login-page form, body.register-page form
   margin 8em auto 2em
