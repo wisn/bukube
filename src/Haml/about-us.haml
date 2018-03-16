@@ -4,11 +4,11 @@
     %meta{charset: 'utf-8'}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %meta{name: 'X-UA-Compatible', content: 'IE=edge'}
-    %title Masuk ke Bukube
+    %title Tentang Bukube
     %link{rel: 'stylesheet', type: 'text/css', href: '/css/default.css'}
     %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css'}
     %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'}
-  %body.login-page
+  %body.about-us-page
     %header
       %nav.navbar.navbar-light.navbar-expand-lg.fixed-top
         .container
@@ -29,20 +29,21 @@
                   %i.fa.fa-shopping-cart
               %li.nav-item
                 %a.nav-link{href: '/register.html'} Registrasi
-              %li.nav-item.active
-                %a.nav-link{href: '/login.html'}
-                  Masuk
-                  %span.sr-only (saat ini)
+              %li.nav-item
+                %a.nav-link{href: '/login.html'} Masuk
     %main
       .container
-        %form{name: 'login'}
-          %h1
-            %a{href: '/'} Bukube
-          %span.unique-underline{style: 'width: 75%'}
-          %input{type: 'text', name: 'identifier', placeholder: 'Alamat Email/Nama Pengguna'}
-          %input{type: 'password', name: 'password', placeholder: 'Kata Sandi'}
-          %input{type: 'submit', value: 'Masuk'}
-        .alert.alert-light
+        %div{align: 'center'}
+          %h1{style: 'margin: 6em 0 1em'}
+            Dalam Tahap Pembangunan
+          %p
+            Halaman ini sedang dalam tahap pembangunan.
+            %br
+            Kami sedang berusaha keras untuk segera menyelesaikannya.
+            %br
+            Terima kasih atas pengertiannya.
+          %a{href: '/'}
+            Kembali ke Beranda
       .carts
         %h3 Keranjang Belanja
         %span Tidak ada buku di keranjang belanja.
