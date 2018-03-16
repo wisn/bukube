@@ -22,6 +22,7 @@ const pages = {
   home: getPage('home'),
   login: getPage('login'),
   register: getPage('register'),
+  sellBook: getPage('sell-book'),
 };
 
 const getJSON = url => {
@@ -181,10 +182,65 @@ const registerActions = () => {
   }
 };
 
+const sellBookActions = () => {
+  if(!!pages.sellBook) {
+    const show = (elm, msg, form) => {
+      elm.style.display = 'block';
+      elm.innerText = msg;
+
+      const inputs = form.querySelectorAll('input');
+      Array.from(inputs).map(elm => elm.disabled = false);
+      form.querySelector('input[type=submit]').value = 'Jual';
+    };
+
+    const forms = pages.sellBook.querySelectorAll('form[name=sell-book]');
+    const form1 = forms[0];
+    const form2 = forms[1];
+    const file = form1.querySelector('input[type=file]');
+
+    file.addEventListener('change', () => {
+      const img = file.files[0];
+
+      if (!!img) {
+        const elm = document.querySelector('img.cover');
+        elm.src = window.URL.createObjectURL(img);
+      }
+    });
+
+    form2.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const inputs = form2.querySelectorAll('input');
+      Array.from(inputs).map(elm => elm.disabled = true);
+      form2.querySelector('input[type=submit]').value = 'Mencoba Jual...';
+
+      const msg = pages.sellBook.querySelector('.alert');
+      msg.innerText = '';
+
+      const title = form2.querySelector('input[name=title]').value;
+      const price = form2.querySelector('input[name=price]').value;
+      const author = form2.querySelector('input[name=author]').value;
+
+      if (or(title.length < 1, price.length < 1, author.length < 1)) {
+        show(msg, 'Ada masukan form yang masih kosong.', form2);
+      } else {
+        if (isNaN(Number(price))) {
+          show(msg, 'Masukan Harga bukan angka.', form2);
+        } else {
+          show(msg, 'Mengalihkan ke proses selanjutnya...', form2);
+        }
+      }
+
+      return false;
+    })
+  }
+}
+
 const actions = {
   defaultActions,
   loginActions,
   registerActions,
+  sellBookActions,
 };
 
 Object.keys(actions).forEach(fn => actions[fn]());

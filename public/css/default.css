@@ -103,80 +103,98 @@ body footer .list a {
   display: inline-block;
   margin: 0 0.5em;
 }
-body.home-page {
+body.home-page,
+body.sell-book-page {
   padding: 4em 0 0;
 }
-body.home-page .big-poster img {
+body.home-page .big-poster img,
+body.sell-book-page .big-poster img {
   width: 100%;
 }
 @media only screen and (max-width: 767px) {
-  body.home-page .big-poster img {
+  body.home-page .big-poster img,
+  body.sell-book-page .big-poster img {
     display: block;
     margin: 0 auto;
     width: 75%;
   }
 }
-body.home-page .big-poster h1 {
+body.home-page .big-poster h1,
+body.sell-book-page .big-poster h1 {
   color: #444;
   font-size: 48pt;
   margin-top: 1em;
 }
 @media only screen and (max-width: 991px) {
-  body.home-page .big-poster h1 {
+  body.home-page .big-poster h1,
+  body.sell-book-page .big-poster h1 {
     font-size: 32pt;
     margin-top: 0.5em;
   }
 }
 @media only screen and (max-width: 767px) {
-  body.home-page .big-poster h1 {
+  body.home-page .big-poster h1,
+  body.sell-book-page .big-poster h1 {
     margin-top: 1em;
     text-align: center;
   }
 }
 @media only screen and (max-width: 370px) {
-  body.home-page .big-poster h1 {
+  body.home-page .big-poster h1,
+  body.sell-book-page .big-poster h1 {
     font-size: 24pt;
   }
 }
-body.home-page .big-poster p {
+body.home-page .big-poster p,
+body.sell-book-page .big-poster p {
   font-size: 24pt;
 }
 @media only screen and (max-width: 991px) {
-  body.home-page .big-poster p {
+  body.home-page .big-poster p,
+  body.sell-book-page .big-poster p {
     font-size: 16pt;
   }
 }
 @media only screen and (max-width: 767px) {
-  body.home-page .big-poster p {
+  body.home-page .big-poster p,
+  body.sell-book-page .big-poster p {
     text-align: center;
   }
 }
 @media only screen and (max-width: 370px) {
-  body.home-page .big-poster p {
+  body.home-page .big-poster p,
+  body.sell-book-page .big-poster p {
     font-size: 12pt;
   }
 }
-body.home-page .big-poster p.sub {
+body.home-page .big-poster p.sub,
+body.sell-book-page .big-poster p.sub {
   font-size: 18pt;
   margin-top: -1em;
 }
 @media only screen and (max-width: 991px) {
-  body.home-page .big-poster p.sub {
+  body.home-page .big-poster p.sub,
+  body.sell-book-page .big-poster p.sub {
     font-size: 14pt;
   }
 }
 @media only screen and (max-width: 767px) {
-  body.home-page .big-poster p.sub {
+  body.home-page .big-poster p.sub,
+  body.sell-book-page .big-poster p.sub {
     text-align: center;
   }
 }
 @media only screen and (max-width: 370px) {
-  body.home-page .big-poster p.sub {
+  body.home-page .big-poster p.sub,
+  body.sell-book-page .big-poster p.sub {
     font-size: 10pt;
   }
 }
-body.home-page .big-poster a.special-button {
+body.home-page .big-poster .special-button,
+body.sell-book-page .big-poster .special-button {
+  background: transparent;
   color: #ababab;
+  cursor: pointer;
   border: 2px solid #ababab;
   display: inline-block;
   font-size: 16pt;
@@ -185,12 +203,14 @@ body.home-page .big-poster a.special-button {
   text-decoration: none;
 }
 @media only screen and (max-width: 991px) {
-  body.home-page .big-poster a.special-button {
+  body.home-page .big-poster .special-button,
+  body.sell-book-page .big-poster .special-button {
     font-size: 14pt;
   }
 }
 @media only screen and (max-width: 767px) {
-  body.home-page .big-poster a.special-button {
+  body.home-page .big-poster .special-button,
+  body.sell-book-page .big-poster .special-button {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -198,30 +218,36 @@ body.home-page .big-poster a.special-button {
   }
 }
 @media only screen and (max-width: 426px) {
-  body.home-page .big-poster a.special-button {
+  body.home-page .big-poster .special-button,
+  body.sell-book-page .big-poster .special-button {
     font-size: 12pt;
   }
 }
 @media only screen and (max-width: 370px) {
-  body.home-page .big-poster a.special-button {
+  body.home-page .big-poster .special-button,
+  body.sell-book-page .big-poster .special-button {
     font-size: 10pt;
   }
 }
 @media only screen and (max-width: 324px) {
-  body.home-page .big-poster a.special-button {
+  body.home-page .big-poster .special-button,
+  body.sell-book-page .big-poster .special-button {
     font-size: 8pt;
   }
 }
-body.home-page .big-poster a.special-button:hover {
+body.home-page .big-poster .special-button:hover,
+body.sell-book-page .big-poster .special-button:hover {
   border: 2px solid #3f51b5;
   color: #3f51b5;
 }
 @media only screen and (max-width: 767px) {
-  body.home-page .big-poster .labels {
+  body.home-page .big-poster .labels,
+  body.sell-book-page .big-poster .labels {
     text-align: center;
   }
 }
-body.home-page .big-poster a.label {
+body.home-page .big-poster a.label,
+body.sell-book-page .big-poster a.label {
   color: #ababab;
   border-bottom: 2px solid #ababab;
   display: inline-block;
@@ -231,22 +257,72 @@ body.home-page .big-poster a.label {
   text-decoration: none;
 }
 @media only screen and (max-width: 991px) {
-  body.home-page .big-poster a.label {
+  body.home-page .big-poster a.label,
+  body.sell-book-page .big-poster a.label {
     margin: 0.5em 0.25em;
   }
 }
 @media only screen and (max-width: 370px) {
-  body.home-page .big-poster a.label {
+  body.home-page .big-poster a.label,
+  body.sell-book-page .big-poster a.label {
     font-size: 10pt;
   }
 }
-body.home-page .big-poster a.label:hover {
+body.home-page .big-poster a.label:hover,
+body.sell-book-page .big-poster a.label:hover {
   color: #3f51b5;
   border-bottom: 2px solid #3f51b5;
 }
 @media only screen and (max-width: 767px) {
-  body.home-page .big-poster img.left {
+  body.home-page .big-poster img.left,
+  body.sell-book-page .big-poster img.left {
     margin: 2em auto 0;
+  }
+}
+body.home-page .big-poster input:not([type=submit]),
+body.sell-book-page .big-poster input:not([type=submit]) {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ababab;
+  color: #ababab;
+  display: block;
+  font-size: 16pt;
+  margin: 1em 0;
+  padding: 0.25em 0.5em;
+  text-align: right;
+  width: 300px;
+}
+@media only screen and (max-width: 767px) {
+  body.home-page .big-poster input:not([type=submit]),
+  body.sell-book-page .big-poster input:not([type=submit]) {
+    margin: 1em auto;
+    text-align: center;
+  }
+}
+body.home-page .big-poster input:not([type=submit]):focus,
+body.sell-book-page .big-poster input:not([type=submit]):focus {
+  border-bottom: 2px solid #3f51b5;
+  color: #3f51b5;
+}
+body.home-page .big-poster input:not([type=submit]):disabled,
+body.sell-book-page .big-poster input:not([type=submit]):disabled {
+  color: #ababab;
+  cursor: default;
+  border: 2px solid #ababab;
+}
+body.home-page .big-poster input[type=file],
+body.sell-book-page .big-poster input[type=file] {
+  display: none;
+}
+body.home-page .big-poster .alert,
+body.sell-book-page .big-poster .alert {
+  padding-right: 0;
+  text-align: right;
+}
+@media only screen and (max-width: 767px) {
+  body.home-page .big-poster .alert,
+  body.sell-book-page .big-poster .alert {
+    text-align: center;
   }
 }
 body.login-page form,
@@ -293,6 +369,7 @@ body.register-page form input:not([type=submit]) {
 body.login-page form input:not([type=submit]):focus,
 body.register-page form input:not([type=submit]):focus {
   border-bottom: 2px solid #3f51b5;
+  color: #3f51b5;
 }
 body.login-page form input:not([type=submit]):disabled,
 body.register-page form input:not([type=submit]):disabled {

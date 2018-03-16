@@ -4,11 +4,11 @@
     %meta{charset: 'utf-8'}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %meta{name: 'X-UA-Compatible', content: 'IE=edge'}
-    %title Masuk ke Bukube
+    %title Bukube &mdash; Jual-Beli Buku Bekas
     %link{rel: 'stylesheet', type: 'text/css', href: '/css/default.css'}
     %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css'}
     %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'}
-  %body.login-page
+  %body.sell-book-page
     %header
       %nav.navbar.navbar-light.navbar-expand-lg.fixed-top
         .container
@@ -21,28 +21,43 @@
                 %a.nav-link{href: '/'} Beranda
               %li.nav-item
                 %a.nav-link{href: '/buy-books.html'} Beli Buku
-              %li.nav-item
-                %a.nav-link{href: '/sell-book.html'} Jual Buku
+              %li.nav-item.active
+                %a.nav-link{href: '/sell-book.html'}
+                  Jual Buku
+                  %span.sr-only (saat ini)
             %ul.navbar-nav.ml-auto
               %li.nav-item
                 %a.nav-link{href: '/carts.html'}
                   %i.fa.fa-shopping-cart
               %li.nav-item
                 %a.nav-link{href: '/register.html'} Registrasi
-              %li.nav-item.active
-                %a.nav-link{href: '/login.html'}
-                  Masuk
-                  %span.sr-only (saat ini)
+              %li.nav-item
+                %a.nav-link{href: '/login.html'} Masuk
     %main
-      .container
-        %form{name: 'login'}
-          %h1
-            %a{href: '/'} Bukube
-          %span.unique-underline{style: 'width: 75%'}
-          %input{type: 'text', name: 'identifier', placeholder: 'Alamat Email/Nama Pengguna'}
-          %input{type: 'password', name: 'password', placeholder: 'Kata Sandi'}
-          %input{type: 'submit', value: 'Masuk'}
-        .alert.alert-light
+      .poster.big-poster
+        .container
+          .row
+            .col-md-6
+              %img.cover{src: '/img/book-lineart.png'}
+              .divider
+              %div{align: 'center'}
+                %form{name: 'sell-book'}
+                  %label.special-button{for: 'cover'}
+                    Pilih Gambar
+                  %input{type: 'file', id: 'cover', name: 'cover', accept: '.jpg, .jpeg, .png'}
+            .col-md-6
+              %div{align: 'right'}
+                %h1 Jual Buku
+                %p
+                  Jual buku bekas yang sudah
+                %p.sub
+                  tak terpakai lagi
+                %form{name: 'sell-book'}
+                  %input{type: 'text', name: 'title', placeholder: 'Judul Buku'}
+                  %input{type: 'text', name: 'author', placeholder: 'Penulis'}
+                  %input{type: 'text', name: 'price', placeholder: 'Harga'}
+                  %input.special-button{type: 'submit', value: 'Jual'}
+                .alert.alert-light
       .carts
         %h3 Keranjang Belanja
         %span Tidak ada buku di keranjang belanja.
