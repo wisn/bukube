@@ -5,9 +5,11 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %meta{name: 'X-UA-Compatible', content: 'IE=edge'}
     %title Beli Buku dari Bukube
-    %link{rel: 'stylesheet', type: 'text/css', href: '/css/default.css'}
     %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css'}
     %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.min.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: '/css/default.css'}
   %body.buy-books-page
     %header
       %nav.navbar.navbar-light.navbar-expand-lg.fixed-top
@@ -35,17 +37,26 @@
                 %a.nav-link{href: '/login.html'} Masuk
     %main
       .container
-        %div{align: 'center'}
-          %h1{style: 'margin: 6em 0 1em'}
-            Dalam Tahap Pembangunan
-          %p
-            Halaman ini sedang dalam tahap pembangunan.
-            %br
-            Kami sedang berusaha keras untuk segera menyelesaikannya.
-            %br
-            Terima kasih atas pengertiannya.
-          %a{href: '/'}
-            Kembali ke Beranda
+        .row
+          .col-md-3
+            %h4 Kategori
+            %select.chosen-select{multiple: 'true', 'data-placeholder': 'Pilih kategori'}
+              %option{value: ''}
+              %option Matematika
+              %option Fisika
+              %option Kimia
+              %option Biologi
+              %option Ilmu Komputer
+              %option Ekonomi
+              %option Sosiologi
+            %div{style: 'padding: .5em'}
+            %button.btn.btn-primary.search
+              Cari
+          .col-md-9
+            .loading
+              Memuat...
+            .racks
+              .row
       .carts
         %h3 Keranjang Belanja
         %span Tidak ada buku di keranjang belanja.
@@ -62,4 +73,7 @@
               %a{href: '/term-of-service.html'} Aturan Penggunaan
     %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'}
     %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'}
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.jquery.min.js'}
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'}
     %script{src: '/js/application.js'}
+    %script{src: '/js/plugins.js'}

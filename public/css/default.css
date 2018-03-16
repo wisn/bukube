@@ -411,3 +411,34 @@ body.register-page .alert {
   display: none;
   text-align: center;
 }
+body.buy-books-page main {
+  padding: 6em 0 1em;
+}
+body.buy-books-page main .loading {
+  margin: 4em auto;
+  text-align: center;
+}
+body.buy-books-page main .racks .card {
+  margin: 1em auto;
+  width: 100%;
+}
+body.buy-books-page main .racks .card .special-button {
+  border: 2px solid #ababab;
+  display: block;
+  padding: 0.5em 0.25em;
+  text-align: center;
+  width: 100%;
+}
+body.buy-books-page main .racks .card .special-button:disabled {
+  cursor: default;
+  color: #ababab;
+  border: 2px solid #ababab;
+}
+body.buy-books-page main .racks .card .special-button:hover {
+  cursor: pointer;
+  color: #3f51b5;
+  border: 2px solid #3f51b5;
+}
+body.buy-books-page main .racks .card img:hover {
+  cursor: zoom-in;
+}

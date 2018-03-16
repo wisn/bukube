@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to the Design & Analysis of Algorithms",
+    "author": "Anany V. Levitin",
+    "publisher": "",
+    "price": 300000,
+    "cover": "/img/intro-to-daa.jpg",
+    "category": ["computer science"]
+  },
+  {
+    "id": 2,
+    "title": "The Princeton Companion to Mathematics",
+    "author": "Timothy Gowers",
+    "publisher": "",
+    "price": 350000,
+    "cover": "/img/princeton-math.png",
+    "category": ["mathematics"]
+  },
+  {
+    "id": 3,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "publisher": "MIT Press",
+    "price": 250000,
+    "cover": "/img/intro-to-algo.jpg",
+    "category": ["mathematics"]
+  }
+]

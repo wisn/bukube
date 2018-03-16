@@ -23,6 +23,7 @@ const pages = {
   login: getPage('login'),
   register: getPage('register'),
   sellBook: getPage('sell-book'),
+  buyBooks: getPage('buy-books'),
 };
 
 const getJSON = url => {
@@ -40,6 +41,16 @@ const getJSON = url => {
   }
 
   return json;
+};
+
+let state = {
+  carts: [],
+};
+
+const addToCart = (elm, book) => {
+  elm.disabled = true;
+
+  state.carts.push(book);
 };
 
 const defaultActions = () => {
@@ -245,11 +256,75 @@ const sellBookActions = () => {
   }
 }
 
+const buyBooksActions = () => {
+  if (!!pages.buyBooks) {
+    const elm = document.querySelector('.racks .row');
+    const lelm = document.querySelector('.loading');
+    const books = getJSON('/json/books.json');
+
+    const renderBooks = books => books.forEach(book => {
+      const wrap = document.createElement('div');
+      wrap.setAttribute('class', 'col-md-4');
+
+      const card = document.createElement('div');
+      card.setAttribute('class', 'card');
+
+      const img = document.createElement('img');
+      img.setAttribute('class', 'card-img-top');
+      img.setAttribute('href', book.cover);
+      img.setAttribute('src', book.cover);
+      img.setAttribute('alt', book.title);
+
+      const body = document.createElement('div');
+      body.setAttribute('class', 'card-body');
+
+      const h5 = document.createElement('h5');
+      h5.setAttribute('class', 'card-title');
+      h5.innerText = book.title;
+
+      const h6 = document.createElement('h6');
+      h6.setAttribute('class', 'card-subtitle mb-2 text-muted');
+      h6.innerText = book.author;
+
+      const p = document.createElement('p');
+      p.setAttribute('class', 'card-text');
+      p.innerText = 'Rp. ' + book.price;
+
+      const a = document.createElement('a');
+      a.setAttribute('id', 'book-' + book.id);
+      a.setAttribute('class', 'special-button');
+      a.setAttribute('onclick', 'addToCart(this, ' + book.id + ')');
+      a.innerText = 'Taruh di Keranjang';
+
+      body.appendChild(h5);
+      body.appendChild(h6);
+      body.appendChild(p);
+      body.appendChild(a);
+
+      card.appendChild(img);
+      card.appendChild(body);
+
+      wrap.appendChild(card);
+
+      elm.appendChild(wrap);
+    });
+
+    if (!!books) {
+      lelm.style.display = 'none';
+
+      renderBooks(books);
+    } else {
+      lelm.innerText = 'Terjadi kesalahan saat mengambil data dari server.';
+    }
+  }
+};
+
 const actions = {
   defaultActions,
   loginActions,
   registerActions,
   sellBookActions,
+  buyBooksActions,
 };
 
 Object.keys(actions).forEach(fn => actions[fn]());

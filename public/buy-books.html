@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="X-UA-Compatible" content="IE=edge"/>
 <title>Beli Buku dari Bukube</title>
-<link rel="stylesheet" type="text/css" href="/css/default.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/></head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+<link rel="stylesheet" type="text/css" href="/css/default.css"/></head>
 <body class="buy-books-page">
 <header>
 <nav class="navbar navbar-light navbar-expand-lg fixed-top">
@@ -34,12 +36,24 @@
 <a href="/login.html" class="nav-link">Masuk</a></li></ul></div></div></nav></header>
 <main>
 <div class="container">
-<div align="center">
-<h1 style="margin: 6em 0 1em">Dalam Tahap Pembangunan</h1>
-<p>Halaman ini sedang dalam tahap pembangunan.
-<br/>Kami sedang berusaha keras untuk segera menyelesaikannya.
-<br/>Terima kasih atas pengertiannya.</p>
-<a href="/">Kembali ke Beranda</a></div></div>
+<div class="row">
+<div class="col-md-3">
+<h4>Kategori</h4>
+<select multiple="true" data-placeholder="Pilih kategori" class="chosen-select">
+<option ></option>
+<option>Matematika</option>
+<option>Fisika</option>
+<option>Kimia</option>
+<option>Biologi</option>
+<option>Ilmu Komputer</option>
+<option>Ekonomi</option>
+<option>Sosiologi</option></select>
+<div style="padding: .5em"></div>
+<button class="btn btn-primary search">Cari</button></div>
+<div class="col-md-9">
+<div class="loading">Memuat...</div>
+<div class="racks">
+<div class="row"></div></div></div></div></div>
 <div class="carts">
 <h3>Keranjang Belanja</h3>
 <span>Tidak ada buku di keranjang belanja.</span></div></main>
@@ -55,4 +69,7 @@
 <a href="/term-of-service.html">Aturan Penggunaan</a></div></div></div></div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="/js/application.js"></script></body></html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script src="/js/application.js"></script>
+<script src="/js/plugins.js"></script></body></html>
