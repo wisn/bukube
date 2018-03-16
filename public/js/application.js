@@ -228,6 +228,15 @@ const sellBookActions = () => {
           show(msg, 'Masukan Harga bukan angka.', form2);
         } else {
           show(msg, 'Mengalihkan ke proses selanjutnya...', form2);
+
+          Array.from(inputs).map(elm => elm.disabled = true);
+          file.disabled = true;
+
+          const label = form1.querySelector('label');
+          label.disabled = true;
+          label.style.color = '#ababab';
+          label.style.cursor = 'default';
+          label.style.border = '2px solid #ababab';
         }
       }
 

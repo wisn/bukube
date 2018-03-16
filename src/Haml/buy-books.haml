@@ -1,0 +1,65 @@
+!!! 5
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %meta{name: 'X-UA-Compatible', content: 'IE=edge'}
+    %title Beli Buku dari Bukube
+    %link{rel: 'stylesheet', type: 'text/css', href: '/css/default.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'}
+  %body.buy-books-page
+    %header
+      %nav.navbar.navbar-light.navbar-expand-lg.fixed-top
+        .container
+          %a.navbar-brand{href: '/'} Bukube
+          %button.navbar-toggler{type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarNav', 'aria-controls': 'navbarNav', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation'}
+            %span.fa.fa-bars
+          .collapse.navbar-collapse#navbarNav
+            %ul.navbar-nav.mr-auto
+              %li.nav-item
+                %a.nav-link{href: '/'} Beranda
+              %li.nav-item.active
+                %a.nav-link{href: '/buy-books.html'}
+                  Beli Buku
+                  %span.sr-only (saat ini)
+              %li.nav-item
+                %a.nav-link{href: '/sell-book.html'} Jual Buku
+            %ul.navbar-nav.ml-auto
+              %li.nav-item
+                %a.nav-link{href: '/carts.html'}
+                  %i.fa.fa-shopping-cart
+              %li.nav-item
+                %a.nav-link{href: '/register.html'} Registrasi
+              %li.nav-item
+                %a.nav-link{href: '/login.html'} Masuk
+    %main
+      .container
+        %div{align: 'center'}
+          %h1{style: 'margin: 6em 0 1em'}
+            Dalam Tahap Pembangunan
+          %p
+            Halaman ini sedang dalam tahap pembangunan.
+            %br
+            Kami sedang berusaha keras untuk segera menyelesaikannya.
+            %br
+            Terima kasih atas pengertiannya.
+          %a{href: '/'}
+            Kembali ke Beranda
+      .carts
+        %h3 Keranjang Belanja
+        %span Tidak ada buku di keranjang belanja.
+    %footer
+      .container
+        .row
+          .col-md-4
+            Hak cipta &copy; 2018,
+            %a{href: '/'} Bukube.
+          .col-md-8
+            .list
+              %a{href: '/about-us.html'} Tentang Kami
+              %a{href: '/privacy-policy.html'} Kebijakan Privasi
+              %a{href: '/term-of-service.html'} Aturan Penggunaan
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'}
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'}
+    %script{src: '/js/application.js'}

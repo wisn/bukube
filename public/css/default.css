@@ -306,6 +306,12 @@ body.sell-book-page .big-poster input:not([type=submit]):focus {
 }
 body.home-page .big-poster input:not([type=submit]):disabled,
 body.sell-book-page .big-poster input:not([type=submit]):disabled {
+  background-color: #fff;
+  border-bottom: 2px solid #ababab;
+  color: #ababab;
+}
+body.home-page .big-poster input[type=submit]:disabled,
+body.sell-book-page .big-poster input[type=submit]:disabled {
   color: #ababab;
   cursor: default;
   border: 2px solid #ababab;
